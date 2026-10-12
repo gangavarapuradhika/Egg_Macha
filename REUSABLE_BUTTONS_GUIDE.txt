@@ -1,0 +1,32 @@
+EGG MACHA REUSABLE UI GUIDE
+===========================
+
+Reusable buttons: lib/reusable_buttons.dart
+- AppButton: common action button. Use AppButtonType.primary, .dark, or .outline.
+- BackButtonApp: consistent back navigation.
+- CategoryButton: reusable category filter chip, wrapped in Material.
+
+Reusable cards: lib/reusable_cards.dart
+- AppCard: common rounded card with optional tap action, padding, background, and border.
+- MetricCard: dashboard total card for sales, orders, stock, and similar values.
+
+Example:
+AppButton(
+  label: 'SAVE',
+  icon: Icons.save_outlined,
+  onPressed: () {},
+)
+
+AppCard(
+  onTap: () {},
+  child: const Text('Inventory'),
+)
+
+MetricCard(
+  label: 'Today sales',
+  value: '₹0',
+  icon: Icons.payments_outlined,
+)
+
+Keep UI components in these shared files instead of creating a new button/card style on each page.
+This project is a frontend demo: local in-memory data and demo credentials are not secure or persistent.
